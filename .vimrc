@@ -14,8 +14,6 @@ set statusline=%F
 set laststatus=2
 
 " Show/Hide Hidden Characters.
-" Change symbols for hidden characters.
-set listchars=tab:▸\ ,eol:¬
 nmap <leader>l :set list!<CR>
 set list! "show hidden characters by default
 
