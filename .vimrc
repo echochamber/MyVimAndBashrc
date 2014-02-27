@@ -99,7 +99,7 @@ nmap :bn :BufSurfForward<cr>
 highlight Search cterm=underline
 
 " Swap files out of the project root
-set backupdir=~/.vim/backup//
+set backupdir=~/.vim/backup/
 set directory=~/.vim/swap//
 
 " Run PHPUnit tests
