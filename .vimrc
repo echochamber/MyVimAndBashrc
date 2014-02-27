@@ -4,14 +4,14 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 " My Bundles
-	" Color Scheme
-	Bundle 'flazz/vim-colorschemes'
+    " Color Scheme
+    Bundle 'flazz/vim-colorschemes'
     set background=light
 
-	"Nerdtree Folder Management
-	Bundle 'scrooloose/nerdtree.git'
+    "Nerdtree Folder Management
+    Bundle 'scrooloose/nerdtree'
 
-	"Powerline: Cool thing at bottom of screep
+    "Powerline: Cool thing at bottom of screep
     Bundle 'Lokaltog/powerline'
 
 set t_Co=256
@@ -67,7 +67,13 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nmap <C-l> <C-w>l   
+
+" Make control C copy to the clipboard
+nmap <C-c> "+y
+
+" Page up and down mapped
+nmap <C-f> <C-u>
 
 "Resize vsplit
 nmap <C-v> :vertical resize +5<cr>
@@ -203,3 +209,7 @@ function! AddDependency()
 '
 endfunction
 nmap ,2  :call AddDependency()<cr>
+
+if  ! has("gui_running")
+    syntax on
+endif
